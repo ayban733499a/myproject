@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Project - Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="top">
+
+  <header class="header">
+    <div class="container header__content">
+      <h1 class="logo">MyProject</h1>
+
+      <nav class="nav" id="nav">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__content">
+        <div>
+          <h2>A clean, responsive landing page</h2>
+          <p>
+            A lightweight HTML/CSS/JS project: mobile menu, theme toggle, animated stats, and a validated contact form.
+          </p>
+          <div class="hero__actions">
+            <a class="btn" href="#contact">Get Started</a>
+            <button class="btn btn--ghost" id="themeBtn" type="button">Toggle Theme</button>
+          </div>
+        </div>
+
+        <div class="card hero__card">
+          <h3>Quick stats</h3>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat__num" data-count="120">0</span>
+              <span class="stat__label">Users</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="45">0</span>
+              <span class="stat__label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="98">0</span>
+              <span class="stat__label">Satisfaction %</span>
+            </div>
+          </div>
+          <p class="hint">Tip: edit these numbers in <code>index.html</code> using <code>data-count</code>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section__title">Features</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Responsive layout</h3>
+            <p>Looks great on desktop, tablet, and mobile devices.</p>
+          </article>
+          <article class="card">
+            <h3>Mobile navigation</h3>
+            <p>A clean hamburger menu that opens and closes smoothly.</p>
+          </article>
+          <article class="card">
+            <h3>Simple JavaScript</h3>
+            <p>Theme switcher, animated counters, and form validation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">About this project</h2>
+        <p class="lead">
+          Use this as a starter template for a portfolio, product page, or a simple business site.
+          Replace text, add images, and extend sections as you like.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section__title">Contact</h2>
+
+        <form class="card form" id="contactForm" novalidate>
+          <label>
+            Name
+            <input type="text" id="name" placeholder="Your name" autocomplete="name" />
+          </label>
+
+          <label>
+            Email
+            <input type="email" id="email" placeholder="name@example.com" autocomplete="email" />
+          </label>
+
+          <label>
+            Message
+            <textarea id="message" rows="4" placeholder="Write your message..."></textarea>
+          </label>
+
+          <button class="btn" type="submit">Send</button>
+          <p class="form__msg" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>© <span id="year"></span> MyProject</span>
+      <a href="#top" class="footer__link">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
